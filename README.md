@@ -7,6 +7,9 @@ Kotlin implementation of [RabbitMQ tutorials](https://www.rabbitmq.com/getstarte
 * The [Work queues tutorial](https://www.rabbitmq.com/tutorials/tutorial-two-java.html)
   * The src/NewTask.kt file contains a console app that publishes a message to the task_queue
   * The src/Worker.kt file contains a console app that subscribes to the task_queue. We can have several workers active processing the messages in the queue.
+* The [Publish/Subscribe tutorial](https://www.rabbitmq.com/tutorials/tutorial-three-java.html)
+  * The src/EmitLog.kt file contains a console app that publishes a message to the logs exchange
+  * The src/ReceiveLogs.kt file contains a console app that subscribes to the exchange with a temporary queue (many ReceiveLogs apps can be run simultaneously, each one will get its own temporary queue)
 
 All the examples assume a RabbitMQ server installation on the local computer.
 
