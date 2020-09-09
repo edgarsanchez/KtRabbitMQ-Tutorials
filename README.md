@@ -10,6 +10,9 @@ Kotlin implementation of [RabbitMQ tutorials](https://www.rabbitmq.com/getstarte
 * The [Publish/Subscribe tutorial](https://www.rabbitmq.com/tutorials/tutorial-three-java.html)
   * The src/EmitLog.kt file contains a console app that publishes a message to the logs exchange
   * The src/ReceiveLogs.kt file contains a console app that subscribes to the exchange with a temporary queue (many ReceiveLogs apps can be run simultaneously, each one will get its own temporary queue)
+* The [Routing tutorial](https://www.rabbitmq.com/tutorials/tutorial-four-java.html)
+  * The src/EmitLogDirect.kt file contains a console app that publishes a message to a direct exchange with a specific routing key
+  * The src/ReceiveLogsDirect.kt file contains a console app that subscribes to the exchange with a temporary queue binded to a specific routing key (many ReceiveLogsDirect apps can be run simultaneously, each one will get its own temporary queue)
 
 All the examples assume a RabbitMQ server installation on the local computer.
 
