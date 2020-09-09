@@ -10,9 +10,8 @@ fun main(argv: Array<String>) {
     factory.newConnection().use { connection ->
         connection.createChannel().use { channel ->
             channel.exchangeDeclare(exchangeName, BuiltinExchangeType.DIRECT)
-            val argv1 = arrayOf<String>("warning")
-            val severity = getSeverity(argv1)
-            val message = getMessage(argv1)
+            val severity = getSeverity(argv)
+            val message = getMessage(argv)
             channel.basicPublish(exchangeName, severity, null, message.toByteArray(StandardCharsets.UTF_8))
             println(" [x] Sent '$severity':'$message'")
         }
